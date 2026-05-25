@@ -182,29 +182,55 @@ minmax(
 
 }
 
-.tests{
+..testSelect{
 
-grid-template-columns:
-
-repeat(
-3,
-1fr
-);
-
-}
-
-.checks label,
-.tests label{
+height:220px;
 
 background:
 
-#172849;
+white;
 
-padding:18px;
+color:
+
+#0f2747;
+
+padding:16px;
 
 border-radius:14px;
 
-cursor:pointer;
+font-size:15px;
+
+}
+
+.testSelect option{
+
+padding:14px;
+
+margin:6px;
+
+border-radius:8px;
+
+}
+
+.testSelect option:checked{
+
+background:
+
+#18b7ff;
+
+color:white;
+
+}
+
+.hint{
+
+margin-top:10px;
+
+font-size:13px;
+
+color:
+
+#8aa3c4;
 
 }
 
