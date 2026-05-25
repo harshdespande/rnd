@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+
+<title>Gabriel R&D Test Request</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+
+<div class="logo">
+
+<h3>GABRIEL</h3>
+<span>R&D PUNE</span>
+
+</div>
+
+<h1>TEST REQUEST</h1>
+
+</header>
+
+
+<div class="card">
+
+<div class="row">
+
+<div>
+
+<label>Request No</label>
+
+<input
+placeholder="TR-2026-001">
+
+</div>
+
+
+<div>
+
+<label>Target Date</label>
+
+<input type="date">
+
+</div>
+
+</div>
+
+
+<h3>PRODUCT STAGE</h3>
+
+<div class="checks">
+
+<label><input type="checkbox"> Prototype</label>
+
+<label><input type="checkbox"> OTS</label>
+
+<label><input type="checkbox"> Audit</label>
+
+<label><input type="checkbox"> Benchmarking</label>
+
+<label><input type="checkbox"> Warranty</label>
+
+</div>
+
+
+<h3>REPORT CIRCULATION</h3>
+
+<div class="checks">
+
+<label><input type="checkbox"> Internal</label>
+
+<label><input type="checkbox"> Collaborator</label>
+
+<label><input type="checkbox"> Customer</label>
+
+</div>
+
+
+<div class="grid">
+
+<input placeholder="From">
+
+<select>
+
+<option>R&D</option>
+
+<option>QA</option>
+
+<option>SSCM</option>
+
+<option>Production</option>
+
+<option>Plant</option>
+
+</select>
+
+<input placeholder="Part Name">
+
+<input placeholder="GIL Part No">
+
+<input placeholder="Application">
+
+<input placeholder="Customer Part No">
+
+<input type="number" placeholder="Qty">
+
+</div>
+
+
+<h3>TYPE OF TEST</h3>
+
+<div class="checks">
+
+<label>
+<input type="checkbox">
+Performance
+</label>
+
+<label>
+<input type="checkbox">
+Durability
+</label>
+
+</div>
+
+
+<label>Purpose</label>
+
+<textarea rows="4"></textarea>
+
+
+<h3>SELECT TESTS</h3>
+
+<div class="tests">
+
+<label><input type="checkbox" value="DF"> DF</label>
+
+<label><input type="checkbox" value="Friction"> Friction</label>
+
+<label><input type="checkbox" value="Temp Characteristics"> Temp Characteristics</label>
+
+<label><input type="checkbox" value="Gas Force"> Gas Force</label>
+
+<label><input type="checkbox" value="Seal Wiping"> Seal Wiping</label>
+
+</div>
+
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>TEST NAME</th>
+
+<th>TEST SPECIFICATION</th>
+
+</tr>
+
+</thead>
+
+<tbody id="testRows">
+
+</tbody>
+
+</table>
+
+
+<h3>ATTACH FILES</h3>
+
+<div id="drop">
+
+Drop files here
+
+<br><br>
+
+<input
+multiple
+type="file">
+
+</div>
+
+
+<h3>STATUS</h3>
+
+<select>
+
+<option>Draft</option>
+
+<option>Submitted</option>
+
+<option>Under Review</option>
+
+<option>Testing</option>
+
+<option>Completed</option>
+
+</select>
+
+
+<button>
+
+SUBMIT REQUEST
+
+</button>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
