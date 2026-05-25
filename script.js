@@ -1,82 +1,71 @@
-const testSelect = document.getElementById(
+const select =
+document.getElementById(
 "testSelect"
 );
 
-const testRows =
+const rows =
 document.getElementById(
 "testRows"
 );
 
-render();
+const selected=[];
 
 
-testSelect.addEventListener(
+select.addEventListener(
+
 "change",
-render
-);
 
+function(){
 
-function render(){
+const test=
 
-testRows.innerHTML="";
-
-
-const selected =
-
-Array
-
-.from(
-testSelect.selectedOptions
-);
+this.value;
 
 
 if(
 
-selected.length===0
+!test ||
+
+selected.includes(
+test
+)
 
 ){
-
-testRows.innerHTML=`
-
-<tr>
-
-<td
-colspan="2"
-
-class="emptyRow">
-
-Select tests above
-
-</td>
-
-</tr>
-
-`;
 
 return;
 
 }
 
 
-selected.forEach(
+selected.push(
+test
+);
 
-t=>{
 
-const row=
+if(
+
+selected.length===1
+
+){
+
+rows.innerHTML="";
+
+}
+
+
+const tr=
 
 document.createElement(
 "tr"
 );
 
 
-row.innerHTML=
-
-`
+tr.innerHTML=`
 
 <td
 class="testCell">
 
-${t.value}
+${test}
 
 </td>
 
@@ -88,7 +77,7 @@ class="testSpec"
 
 placeholder=
 
-"Write test specification for ${t.value}"
+"Write specification for ${test}"
 
 >
 
@@ -98,12 +87,14 @@ placeholder=
 
 `;
 
-testRows.appendChild(
-row
+
+rows.appendChild(
+tr
 );
+
+
+this.value="";
 
 }
 
 );
-
-}
