@@ -3,12 +3,12 @@ document.getElementById(
 "testSelect"
 );
 
-const rows =
+const table =
 document.getElementById(
 "testRows"
 );
 
-const selected=[];
+let tests=[];
 
 
 select.addEventListener(
@@ -24,9 +24,11 @@ this.value;
 
 if(
 
-!test ||
+test===""
 
-selected.includes(
+||
+
+tests.includes(
 test
 )
 
@@ -37,35 +39,38 @@ return;
 }
 
 
-selected.push(
+tests.push(
 test
 );
 
 
-if(
+render();
 
-selected.length===1
 
-){
-
-rows.innerHTML="";
+this.value="";
 
 }
 
-
-const tr=
-
-document.createElement(
-"tr"
 );
 
 
-tr.innerHTML=`
+function render(){
+
+table.innerHTML="";
+
+
+tests.forEach(
+
+t=>{
+
+table.innerHTML+=`
+
+<tr>
 
 <td
 class="testCell">
 
-${test}
+${t}
 
 </td>
 
@@ -77,7 +82,7 @@ class="testSpec"
 
 placeholder=
 
-"Write specification for ${test}"
+"Write specification"
 
 >
 
@@ -85,16 +90,12 @@ placeholder=
 
 </td>
 
+</tr>
+
 `;
-
-
-rows.appendChild(
-tr
-);
-
-
-this.value="";
 
 }
 
 );
+
+}
