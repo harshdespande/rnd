@@ -1,180 +1,59 @@
-body{
+const checks=document.querySelectorAll(".tests input")
 
-margin:0;
+const table=document.getElementById("testRows")
 
-background:#eef3fa;
+checks.forEach(
 
-font-family:Arial;
+c=>{
 
-}
+c.addEventListener(
 
-.container{
+"change",
 
-width:92%;
+build
 
-margin:auto;
-
-padding:30px;
+)
 
 }
 
-header{
+)
 
-display:flex;
+function build(){
 
-justify-content:space-between;
+table.innerHTML=""
 
-align-items:center;
+checks.forEach(
 
-background:#0f2747;
+c=>{
 
-color:white;
+if(c.checked){
 
-padding:20px;
+table.innerHTML+=`
 
-border-radius:18px;
+<tr>
 
-}
+<td>
 
-.card{
+${c.value}
 
-margin-top:20px;
+</td>
 
-background:white;
+<td>
 
-padding:30px;
+<textarea
+placeholder="Enter specification">
+</textarea>
 
-border-radius:18px;
+</td>
 
-box-shadow:0 10px 30px rgba(0,0,0,.08);
+</tr>
 
-}
-
-.grid{
-
-display:grid;
-
-grid-template-columns:1fr 1fr;
-
-gap:18px;
+`
 
 }
 
-.row{
-
-display:grid;
-
-grid-template-columns:1fr 1fr;
-
-gap:18px;
-
 }
 
-input,
-textarea,
-select{
-
-width:100%;
-
-padding:14px;
-
-margin-top:8px;
-
-border-radius:10px;
-
-border:1px solid #d8dbe2;
-
-}
-
-.checks{
-
-display:flex;
-
-gap:25px;
-
-flex-wrap:wrap;
-
-margin-bottom:25px;
-
-}
-
-.tests{
-
-display:grid;
-
-grid-template-columns:repeat(3,1fr);
-
-}
-
-table{
-
-width:100%;
-
-border-collapse:collapse;
-
-margin-top:20px;
-
-}
-
-th{
-
-background:#0f2747;
-
-color:white;
-
-padding:14px;
-
-}
-
-td{
-
-border:1px solid #ddd;
-
-padding:10px;
-
-}
-
-#drop{
-
-padding:50px;
-
-border:3px dashed #0f2747;
-
-text-align:center;
-
-border-radius:18px;
-
-margin-top:15px;
-
-}
-
-button{
-
-margin-top:30px;
-
-width:100%;
-
-padding:16px;
-
-border:none;
-
-background:#0f2747;
-
-color:white;
-
-font-size:18px;
-
-border-radius:12px;
-
-}
-
-@media(max-width:768px){
-
-.grid,
-.row{
-
-grid-template-columns:1fr;
-
-}
+)
 
 }
