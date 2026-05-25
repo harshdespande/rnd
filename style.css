@@ -1,316 +1,308 @@
-<!DOCTYPE html>
-<html>
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
-<head>
+*{
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width">
+margin:0;
 
-<title>Gabriel R&D Test Request</title>
+padding:0;
 
-<link rel="stylesheet" href="style.css">
+box-sizing:border-box;
 
-</head>
+font-family:Inter;
 
-<body>
+}
 
-<div class="container">
+body{
 
-<div class="top">
+background:
 
-<div>
+linear-gradient(
+180deg,
+#071321,
+#0d1e36
+);
 
-<div class="company">
+padding:40px;
 
-GABRIEL
+}
 
-</div>
+.container{
 
-<div class="sub">
+max-width:1200px;
 
-R&D PUNE
+margin:auto;
 
-</div>
+}
 
-</div>
+.top{
 
-<div class="title">
+display:flex;
 
-R&D TEST REQUEST
+justify-content:space-between;
 
-</div>
+align-items:center;
 
-</div>
+margin-bottom:35px;
 
+}
 
-<div class="card">
+.company{
 
-<section>
+color:white;
 
-<h3>REQUEST INFORMATION</h3>
+font-size:34px;
 
-<div class="row">
+font-weight:700;
 
-<div>
+}
 
-<label>Request No</label>
+.sub{
 
-<input placeholder="TR-2026-001">
+color:#7c93b3;
 
-</div>
+}
 
-<div>
+.title{
 
-<label>Target Date</label>
+color:#16d2ff;
 
-<input type="date">
+font-size:48px;
 
-</div>
+font-weight:700;
 
-</div>
+}
 
-</section>
+.card{
 
+background:
 
-<section>
+#101d35;
 
-<h3>PRODUCT STAGE</h3>
+padding:40px;
 
-<div class="checks">
+border-radius:28px;
 
-<label><input type="checkbox"> Prototype</label>
+}
 
-<label><input type="checkbox"> OTS</label>
+section{
 
-<label><input type="checkbox"> Audit</label>
+margin-bottom:35px;
 
-<label><input type="checkbox"> Benchmarking</label>
+}
 
-<label><input type="checkbox"> Warranty</label>
+h3{
 
-</div>
+color:white;
 
-</section>
+margin-bottom:18px;
 
+font-size:18px;
 
-<section>
+}
 
-<h3>REPORT CIRCULATION</h3>
+label{
 
-<div class="checks">
+display:block;
 
-<label><input type="checkbox"> Internal</label>
+margin-bottom:10px;
 
-<label><input type="checkbox"> Collaborator</label>
+color:#dce6f4;
 
-<label><input type="checkbox"> Customer</label>
+}
 
-</div>
+.row,
+.grid{
 
-</section>
+display:grid;
 
+gap:18px;
 
-<section>
+}
 
-<h3>PART DETAILS</h3>
+.row{
 
-<div class="grid">
+grid-template-columns:1fr 1fr;
 
-<div>
+}
 
-<label>From</label>
+.grid{
 
-<input>
+grid-template-columns:
 
-</div>
+repeat(
+2,
+1fr
+);
 
-<div>
+}
 
-<label>Department</label>
+input,
+select,
+textarea{
 
-<select>
+width:100%;
 
-<option>R&D</option>
+padding:18px;
 
-<option>QA</option>
+background:white;
 
-<option>SSCM</option>
+border:none;
 
-<option>Production</option>
+border-radius:14px;
 
-<option>Plant</option>
+}
 
-</select>
+textarea{
 
-</div>
+height:130px;
 
-<div>
+}
 
-<label>Part Name</label>
+.checks,
+.tests{
 
-<input>
+display:grid;
 
-</div>
+gap:15px;
 
-<div>
+}
 
-<label>GIL Part No</label>
+.checks{
 
-<input>
+grid-template-columns:
 
-</div>
+repeat(
+auto-fit,
+minmax(
+180px,
+1fr
+)
 
-<div>
+);
 
-<label>Application</label>
+}
 
-<input>
+.tests{
 
-</div>
+grid-template-columns:
 
-<div>
+repeat(
+3,
+1fr
+);
 
-<label>Customer Part No</label>
+}
 
-<input>
+.checks label,
+.tests label{
 
-</div>
+background:
 
-<div>
+#172849;
 
-<label>Qty</label>
+padding:18px;
 
-<input>
+border-radius:14px;
 
-</div>
+cursor:pointer;
 
-</div>
+}
 
-</section>
+table{
 
+width:100%;
 
-<section>
+border-collapse:collapse;
 
-<h3>TYPE OF TEST</h3>
+overflow:hidden;
 
-<div class="checks">
+border-radius:14px;
 
-<label><input type="checkbox"> Performance</label>
+}
 
-<label><input type="checkbox"> Durability</label>
+th{
 
-</div>
+background:#16d2ff;
 
-</section>
+color:black;
 
+padding:18px;
 
-<section>
+}
 
-<label>Purpose</label>
+td{
 
-<textarea></textarea>
+background:white;
 
-</section>
+padding:18px;
 
+}
 
-<section>
+#drop{
 
-<h3>SELECT TESTS</h3>
+padding:70px;
 
-<div class="tests">
+border:
 
-<label><input type="checkbox"> DF</label>
+3px dashed
+#16d2ff;
 
-<label><input type="checkbox"> Friction</label>
+text-align:center;
 
-<label><input type="checkbox"> Temp Characteristics</label>
+border-radius:18px;
 
-<label><input type="checkbox"> Gas Force</label>
+color:white;
 
-<label><input type="checkbox"> Seal Wiping</label>
+}
 
-</div>
+#drop input{
 
-</section>
+margin-top:25px;
 
+}
 
-<section>
+button{
 
-<table>
+width:100%;
 
-<thead>
+padding:22px;
 
-<tr>
+background:
 
-<th>TEST NAME</th>
+linear-gradient(
+90deg,
+#18b7ff,
+#2079ff
+);
 
-<th>TEST SPECIFICATION</th>
+border:none;
 
-</tr>
+color:white;
 
-</thead>
+font-size:18px;
 
-<tbody id="testRows">
+border-radius:16px;
 
-</tbody>
+cursor:pointer;
 
-</table>
+}
 
-</section>
+@media(max-width:900px){
 
+.row,
+.grid,
+.tests{
 
-<section>
+grid-template-columns:1fr;
 
-<h3>ATTACH ADDITIONAL FILES</h3>
+}
 
-<div id="drop">
+.top{
 
-<div>
+flex-direction:column;
 
-Drag & Drop Files
+gap:20px;
 
-</div>
+}
 
-<input type="file" multiple>
-
-</div>
-
-</section>
-
-
-<section>
-
-<h3>STATUS</h3>
-
-<select>
-
-<option>Draft</option>
-
-<option>Submitted</option>
-
-<option>Under Review</option>
-
-<option>Testing</option>
-
-<option>Completed</option>
-
-</select>
-
-</section>
-
-
-<button>
-
-SUBMIT REQUEST
-
-</button>
-
-</div>
-
-</div>
-
-<script src="script.js"></script>
-
-</body>
-
-</html>
+}
