@@ -3,12 +3,12 @@ document.getElementById(
 "testSelect"
 );
 
-const table =
+const rows =
 document.getElementById(
 "testRows"
 );
 
-let tests=[];
+let selectedTests=[];
 
 
 select.addEventListener(
@@ -17,19 +17,19 @@ select.addEventListener(
 
 function(){
 
-const test=
+const selected =
 
 this.value;
 
 
 if(
 
-test===""
+selected===""
 
 ||
 
-tests.includes(
-test
+selectedTests.includes(
+selected
 )
 
 ){
@@ -39,38 +39,75 @@ return;
 }
 
 
-tests.push(
-test
+selectedTests.push(
+selected
 );
 
 
-render();
+updateTable();
 
 
-this.value="";
+this.selectedIndex=0;
 
 }
 
 );
 
 
-function render(){
+function updateTable(){
 
-table.innerHTML="";
+rows.innerHTML="";
 
 
-tests.forEach(
+if(
 
-t=>{
+selectedTests.length===0
 
-table.innerHTML+=`
+){
+
+rows.innerHTML=
+
+`
 
 <tr>
 
 <td
+colspan="2"
+
+class="emptyRow">
+
+Select test above
+
+</td>
+
+</tr>
+
+`;
+
+return;
+
+}
+
+
+selectedTests.forEach(
+
+test=>{
+
+const row=
+
+document.createElement(
+"tr"
+);
+
+
+row.innerHTML=
+
+`
+
+<td
 class="testCell">
 
-${t}
+${test}
 
 </td>
 
@@ -82,7 +119,7 @@ class="testSpec"
 
 placeholder=
 
-"Write specification"
+"Write specification for ${test}"
 
 >
 
@@ -90,9 +127,11 @@ placeholder=
 
 </td>
 
-</tr>
-
 `;
+
+rows.appendChild(
+row
+);
 
 }
 
