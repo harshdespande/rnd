@@ -137,55 +137,45 @@ Durability
 <textarea rows="4"></textarea>
 
 
-<h3>SELECT TESTS</h3>
-
-<select
-class="testSelect"
-multiple
-id="testSelect">
-
-<option value="DF">
-DF
-</option>
-
-<option value="Friction">
-Friction
-</option>
-
-<option value="Temp Characteristics">
-Temp Characteristics
-</option>
-
-<option value="Gas Force">
-Gas Force
-</option>
-
-<option value="Seal Wiping">
-Seal Wiping
-</option>
-
-<option value="Durability">
-Durability
-</option>
-
-<option value="Performance">
-Performance
-</option>
-
-</select>
-
-<div class="hint">
-
-Hold Ctrl (Windows) / Cmd (Mac) to select multiple tests
-
-</div>
-
-
 <table>
 
 <thead>
 
 <tr>
+
+<th style="width:35%">
+
+TEST NAME
+
+</th>
+
+<th>
+
+TEST SPECIFICATION
+
+</th>
+
+</tr>
+
+</thead>
+
+<tbody id="testRows">
+
+<tr>
+
+<td colspan="2"
+
+class="emptyRow">
+
+No tests selected
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
 
 <table>
 
@@ -194,17 +184,38 @@ Hold Ctrl (Windows) / Cmd (Mac) to select multiple tests
 <tr>
 
 <th style="width:35%">
+
 TEST NAME
+
 </th>
 
 <th>
+
 TEST SPECIFICATION
+
 </th>
 
 </tr>
 
 </thead>
 
+<tbody id="testRows">
+
+<tr>
+
+<td colspan="2"
+
+class="emptyRow">
+
+No tests selected
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
 <tbody id="testRows">
 
 </tbody>
