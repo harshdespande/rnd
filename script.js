@@ -1,59 +1,109 @@
-const checks=document.querySelectorAll(".tests input")
+const testSelect = document.getElementById(
+"testSelect"
+);
 
-const table=document.getElementById("testRows")
+const testRows =
+document.getElementById(
+"testRows"
+);
 
-checks.forEach(
+render();
 
-c=>{
 
-c.addEventListener(
-
+testSelect.addEventListener(
 "change",
+render
+);
 
-build
 
-)
+function render(){
 
-}
+testRows.innerHTML="";
 
-)
 
-function build(){
+const selected =
 
-table.innerHTML=""
+Array
 
-checks.forEach(
+.from(
+testSelect.selectedOptions
+);
 
-c=>{
 
-if(c.checked){
+if(
 
-table.innerHTML+=`
+selected.length===0
+
+){
+
+testRows.innerHTML=`
 
 <tr>
 
-<td>
+<td
+colspan="2"
 
-${c.value}
+class="emptyRow">
+
+Select tests above
+
+</td>
+
+</tr>
+
+`;
+
+return;
+
+}
+
+
+selected.forEach(
+
+t=>{
+
+const row=
+
+document.createElement(
+"tr"
+);
+
+
+row.innerHTML=
+
+`
+
+<td
+class="testCell">
+
+${t.value}
 
 </td>
 
 <td>
 
 <textarea
-placeholder="Enter specification">
+
+class="testSpec"
+
+placeholder=
+
+"Write test specification for ${t.value}"
+
+>
+
 </textarea>
 
 </td>
 
-</tr>
+`;
 
-`
+testRows.appendChild(
+row
+);
 
 }
 
-}
-
-)
+);
 
 }
