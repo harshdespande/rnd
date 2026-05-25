@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width">
 
-<title>Gabriel R&D Test Request</title>
+<meta name="viewport"
+content="width=device-width">
 
-<link rel="stylesheet" href="style.css">
+<title>
+Gabriel R&D Test Request
+</title>
+
+<link
+rel="stylesheet"
+href="style.css">
 
 </head>
 
@@ -20,6 +27,7 @@
 <div class="logo">
 
 <h3>GABRIEL</h3>
+
 <span>R&D PUNE</span>
 
 </div>
@@ -35,7 +43,11 @@
 
 <div>
 
-<label>Request No</label>
+<label>
+
+Request No
+
+</label>
 
 <input
 placeholder="TR-2026-001">
@@ -45,9 +57,14 @@ placeholder="TR-2026-001">
 
 <div>
 
-<label>Target Date</label>
+<label>
 
-<input type="date">
+Target Date
+
+</label>
+
+<input
+type="date">
 
 </div>
 
@@ -58,15 +75,30 @@ placeholder="TR-2026-001">
 
 <div class="checks">
 
-<label><input type="checkbox"> Prototype</label>
+<label>
+<input type="checkbox">
+Prototype
+</label>
 
-<label><input type="checkbox"> OTS</label>
+<label>
+<input type="checkbox">
+OTS
+</label>
 
-<label><input type="checkbox"> Audit</label>
+<label>
+<input type="checkbox">
+Audit
+</label>
 
-<label><input type="checkbox"> Benchmarking</label>
+<label>
+<input type="checkbox">
+Benchmarking
+</label>
 
-<label><input type="checkbox"> Warranty</label>
+<label>
+<input type="checkbox">
+Warranty
+</label>
 
 </div>
 
@@ -75,18 +107,29 @@ placeholder="TR-2026-001">
 
 <div class="checks">
 
-<label><input type="checkbox"> Internal</label>
+<label>
+<input type="checkbox">
+Internal
+</label>
 
-<label><input type="checkbox"> Collaborator</label>
+<label>
+<input type="checkbox">
+Collaborator
+</label>
 
-<label><input type="checkbox"> Customer</label>
+<label>
+<input type="checkbox">
+Customer
+</label>
 
 </div>
 
 
 <div class="grid">
 
-<input placeholder="From">
+<input
+placeholder="From">
+
 
 <select>
 
@@ -102,149 +145,26 @@ placeholder="TR-2026-001">
 
 </select>
 
-<input placeholder="Part Name">
-
-<input placeholder="GIL Part No">
-
-<input placeholder="Application">
-
-<input placeholder="Customer Part No">
-
-<input type="number" placeholder="Qty">
-
-</div>
-
-
-<h3>TYPE OF TEST</h3>
-
-<div class="checks">
-
-<label>
-<input type="checkbox">
-Performance
-</label>
-
-<label>
-<input type="checkbox">
-Durability
-</label>
-
-</div>
-
-
-<!DOCTYPE html>
-<html>
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width">
-
-<title>Gabriel R&D Test Request</title>
-
-<link rel="stylesheet" href="style.css">
-
-</head>
-
-<body>
-
-<div class="container">
-
-<header>
-
-<div class="logo">
-
-<h3>GABRIEL</h3>
-<span>R&D PUNE</span>
-
-</div>
-
-<h1>TEST REQUEST</h1>
-
-</header>
-
-
-<div class="card">
-
-<div class="row">
-
-<div>
-
-<label>Request No</label>
 
 <input
-placeholder="TR-2026-001">
-
-</div>
+placeholder="Part Name">
 
 
-<div>
-
-<label>Target Date</label>
-
-<input type="date">
-
-</div>
-
-</div>
+<input
+placeholder="GIL Part No">
 
 
-<h3>PRODUCT STAGE</h3>
-
-<div class="checks">
-
-<label><input type="checkbox"> Prototype</label>
-
-<label><input type="checkbox"> OTS</label>
-
-<label><input type="checkbox"> Audit</label>
-
-<label><input type="checkbox"> Benchmarking</label>
-
-<label><input type="checkbox"> Warranty</label>
-
-</div>
+<input
+placeholder="Application">
 
 
-<h3>REPORT CIRCULATION</h3>
-
-<div class="checks">
-
-<label><input type="checkbox"> Internal</label>
-
-<label><input type="checkbox"> Collaborator</label>
-
-<label><input type="checkbox"> Customer</label>
-
-</div>
+<input
+placeholder="Customer Part No">
 
 
-<div class="grid">
-
-<input placeholder="From">
-
-<select>
-
-<option>R&D</option>
-
-<option>QA</option>
-
-<option>SSCM</option>
-
-<option>Production</option>
-
-<option>Plant</option>
-
-</select>
-
-<input placeholder="Part Name">
-
-<input placeholder="GIL Part No">
-
-<input placeholder="Application">
-
-<input placeholder="Customer Part No">
-
-<input type="number" placeholder="Qty">
+<input
+type="number"
+placeholder="Qty">
 
 </div>
 
@@ -254,21 +174,84 @@ placeholder="TR-2026-001">
 <div class="checks">
 
 <label>
+
 <input type="checkbox">
+
 Performance
+
 </label>
 
 <label>
+
 <input type="checkbox">
+
 Durability
+
 </label>
 
 </div>
 
 
-<label>Purpose</label>
+<label>
 
-<textarea rows="4"></textarea>
+Purpose
+
+</label>
+
+<textarea
+rows="4">
+
+</textarea>
+
+
+<h3>
+
+SELECT TEST
+
+</h3>
+
+
+<select
+id="testSelect"
+class="testSelect">
+
+<option value="">
+
+Select Test
+
+</option>
+
+<option>
+
+DF
+
+</option>
+
+<option>
+
+Friction
+
+</option>
+
+<option>
+
+Temp Characteristics
+
+</option>
+
+<option>
+
+Gas Force
+
+</option>
+
+<option>
+
+Seal Wiping
+
+</option>
+
+</select>
 
 
 <table>
@@ -277,7 +260,7 @@ Durability
 
 <tr>
 
-<th style="width:35%">
+<th>
 
 TEST NAME
 
@@ -293,15 +276,17 @@ TEST SPECIFICATION
 
 </thead>
 
-<tbody id="testRows">
+
+<tbody
+id="testRows">
 
 <tr>
 
-<td colspan="2"
-
+<td
+colspan="2"
 class="emptyRow">
 
-No tests selected
+Select test above
 
 </td>
 
@@ -311,53 +296,12 @@ No tests selected
 
 </table>
 
-<table>
 
-<thead>
+<h3>
 
-<tr>
+ATTACH FILES
 
-<th style="width:35%">
-
-TEST NAME
-
-</th>
-
-<th>
-
-TEST SPECIFICATION
-
-</th>
-
-</tr>
-
-</thead>
-
-<tbody id="testRows">
-
-<tr>
-
-<td colspan="2"
-
-class="emptyRow">
-
-No tests selected
-
-</td>
-
-</tr>
-
-</tbody>
-
-</table>
-<tbody id="testRows">
-
-</tbody>
-
-</table>
-
-
-<h3>ATTACH FILES</h3>
+</h3>
 
 <div id="drop">
 
@@ -372,19 +316,44 @@ type="file">
 </div>
 
 
-<h3>STATUS</h3>
+<h3>
+
+STATUS
+
+</h3>
+
 
 <select>
 
-<option>Draft</option>
+<option>
 
-<option>Submitted</option>
+Draft
 
-<option>Under Review</option>
+</option>
 
-<option>Testing</option>
+<option>
 
-<option>Completed</option>
+Submitted
+
+</option>
+
+<option>
+
+Under Review
+
+</option>
+
+<option>
+
+Testing
+
+</option>
+
+<option>
+
+Completed
+
+</option>
 
 </select>
 
@@ -399,55 +368,10 @@ SUBMIT REQUEST
 
 </div>
 
-<script src="script.js"></script>
+<script src="script.js">
+
+</script>
 
 </body>
-</html>
 
-
-<h3>ATTACH FILES</h3>
-
-<div id="drop">
-
-Drop files here
-
-<br><br>
-
-<input
-multiple
-type="file">
-
-</div>
-
-
-<h3>STATUS</h3>
-
-<select>
-
-<option>Draft</option>
-
-<option>Submitted</option>
-
-<option>Under Review</option>
-
-<option>Testing</option>
-
-<option>Completed</option>
-
-</select>
-
-
-<button>
-
-SUBMIT REQUEST
-
-</button>
-
-</div>
-
-</div>
-
-<script src="script.js"></script>
-
-</body>
 </html>
